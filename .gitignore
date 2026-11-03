@@ -1,0 +1,12 @@
+.idea
+node_modules
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Build output and caches
+.output
+.nitro
+.tanstack
+dist
