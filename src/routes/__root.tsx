@@ -1,6 +1,8 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
-import appCss from '~/styles/app.css?url'
+// A plain import puts the stylesheet in Start's client manifest, so the server
+// links the file the client build emitted.
+import '~/styles/app.css'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -10,7 +12,6 @@ export const Route = createRootRoute({
       { title: 'TanStack Start on Wodby' },
     ],
     links: [
-      { rel: 'stylesheet', href: appCss },
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
     ],
   }),
